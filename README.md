@@ -1,1 +1,1 @@
-# js-lessons
+# goit-js-hw-01
