@@ -34,13 +34,68 @@
 // }
 // console.log(result);
 
+// ======== Task =============
+
 // Напишіть функцію greet(name),
 //     яка приймає ім'я і повертає рядок
 // «Hello, [ім'я]!». Викличте її з різними іменами.
 
-let userName = prompt('Write your name');
-function greet(name) {
-  return `Hello ${name}`;
+// let userName = prompt('Write your name');
+// function greet(name) {
+//   return `Hello ${name}`;
+// }
+
+// alert(greet(userName));
+
+// ======== Задача 1. =============
+
+// Напиши функцію getFullName,
+// яка приймає два параметри firstName і lastName
+// і повертає повне ім'я через пробіл. Викличи з різними іменами.
+
+/*
+let firstUserName = prompt('Your Fisrt Name pls');
+let lastUserName = prompt('Your last Name pls');
+
+function getFullName(firsName, lastName) {
+  return `${firstName} ${lastName}.`;
 }
 
-alert(greet(userName));
+console.log(firstUserName, lastUserName);
+
+*/
+
+// ======== Задача 2. =============
+
+// Напиши функцію describeCity,
+// яка приймає city і country
+// і повертає рядок "Місто [city] знаходиться в [country]".
+// Викличи з 3 різними містами.
+
+function describeCity(city, country) {
+  return `Місто ${city}, знаходиться в ${country}`;
+}
+console.log('Kharkiv', 'Ukraine');
+console.log('Barcelona', 'Spain');
+console.log('Dubai', 'UAE');
+
+// ======== Задача 3. =============
+
+// Напиши функцію repeat,
+// яка приймає слово word і число times
+// і повертає рядок
+// де слово повторюється вказану кількість разів через пробіл.
+//  Наприклад repeat("привіт", 3) → "привіт привіт привіт".
+
+// ======== Задача 4. =============
+
+// Напиши функцію introduce,
+// яка приймає name і age
+// і повертає рядок "Мене звати [name], мені [age] років".
+// Викличи зі своїми даними.
+
+// Задача 5.
+// Напиши функцію calcArea,
+// яка приймає width і height
+// і повертає площу прямокутника.
+// Виведи результат з поясненням: "Площа прямокутника: [результат]".
