@@ -57,7 +57,7 @@
 let firstUserName = prompt('Your Fisrt Name pls');
 let lastUserName = prompt('Your last Name pls');
 
-function getFullName(firsName, lastName) {
+function getFullName(firstName, lastName) {
   return `${firstName} ${lastName}.`;
 }
 
@@ -76,9 +76,9 @@ console.log(firstUserName, lastUserName);
 function describeCity(city, country) {
   return `Місто ${city}, знаходиться в ${country}`;
 }
-console.log('Kharkiv', 'Ukraine');
-console.log('Barcelona', 'Spain');
-console.log('Dubai', 'UAE');
+console.log(describeCity('Kharkiv', 'Ukraine'));
+console.log(describeCity('Barcelona', 'Spain'));
+console.log(describeCity('Dubai', 'UAE'));
 */
 
 // ======== Задача 3. =============
@@ -88,7 +88,7 @@ console.log('Dubai', 'UAE');
 // і повертає рядок
 // де слово повторюється вказану кількість разів через пробіл.
 //  Наприклад repeat("привіт", 3) → "привіт привіт привіт".
-
+/*
 function repeat(word, times) {
   let wordWithSpace = word + ' ';
   let result = wordWithSpace.repeat(times);
@@ -98,7 +98,7 @@ function repeat(word, times) {
 console.log(repeat('Romario', 3));
 console.log(repeat('Alex', 3));
 console.log(repeat('Maryna', 3));
-
+*/
 // ======== Задача 4. =============
 
 // Напиши функцію introduce,
@@ -106,8 +106,24 @@ console.log(repeat('Maryna', 3));
 // і повертає рядок "Мене звати [name], мені [age] років".
 // Викличи зі своїми даними.
 
-// Задача 5.
+/*
+let userName = prompt('What is your name stranger?');
+let userAge = prompt('How old are you?');
+function introduce(name, age) {
+  return `Мене звати ${name}, мені ${age} років`;
+}
+alert(introduce(userName, userAge));
+*/
+
+// ======== Задача 5. =============
+
 // Напиши функцію calcArea,
 // яка приймає width і height
 // і повертає площу прямокутника.
 // Виведи результат з поясненням: "Площа прямокутника: [результат]".
+
+function calcArea(width, height) {
+  let result = Math.round(width * height);
+  return `Площа прямокутника: ${result}`;
+}
+console.log(calcArea(4.9, 3.2));
