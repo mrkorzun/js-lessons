@@ -72,12 +72,14 @@ console.log(firstUserName, lastUserName);
 // і повертає рядок "Місто [city] знаходиться в [country]".
 // Викличи з 3 різними містами.
 
+/*
 function describeCity(city, country) {
   return `Місто ${city}, знаходиться в ${country}`;
 }
 console.log('Kharkiv', 'Ukraine');
 console.log('Barcelona', 'Spain');
 console.log('Dubai', 'UAE');
+*/
 
 // ======== Задача 3. =============
 
@@ -86,6 +88,16 @@ console.log('Dubai', 'UAE');
 // і повертає рядок
 // де слово повторюється вказану кількість разів через пробіл.
 //  Наприклад repeat("привіт", 3) → "привіт привіт привіт".
+
+function repeat(word, times) {
+  let wordWithSpace = word + ' ';
+  let result = wordWithSpace.repeat(times);
+  return result;
+}
+
+console.log(repeat('Romario', 3));
+console.log(repeat('Alex', 3));
+console.log(repeat('Maryna', 3));
 
 // ======== Задача 4. =============
 
