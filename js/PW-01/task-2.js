@@ -24,3 +24,21 @@ function getScreenType(screenWidth) {
 
 console.log(getScreenType(Number(prompt('Введите размер экрана')))); 
 */
+/*
+function greetName(firstName, lastName) {
+  console.log(`Welcome ${firstName} ${lastName}`);
+}
+
+greetName(prompt('Write your first name:'), prompt('Write your last name:'));
+*/
+
+function calcBMI(weight, height) {
+  weight = Number(weight);
+  height = Number(height);
+
+  const result = weight / height ** 2;
+
+  return result.toFixed(1);
+}
+
+console.log(calcBMI('74', '1.75'));
