@@ -8,28 +8,39 @@
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
 
-const num = +prompt('Введи число вiд 0-4');
-let result = '';
+// const num = +prompt('Введи число вiд 0-4');
+// let result = '';
 
-switch (num) {
-  case 1:
-    result = 'зима';
-    break;
+// switch (num) {
+//   case 1:
+//     result = 'зима';
+//     break;
 
-  case 2:
-    result = 'весна';
-    break;
+//   case 2:
+//     result = 'весна';
+//     break;
 
-  case 3:
-    result = 'лiто';
-    break;
+//   case 3:
+//     result = 'лiто';
+//     break;
 
-  case 4:
-    result = 'осiнь';
-    break;
+//   case 4:
+//     result = 'осiнь';
+//     break;
 
-  default:
-    result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
-    break;
+//   default:
+//     result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
+//     break;
+// }
+// console.log(result);
+
+// Напишіть функцію greet(name),
+//     яка приймає ім'я і повертає рядок
+// «Hello, [ім'я]!». Викличте її з різними іменами.
+
+let userName = prompt('Write your name');
+function greet(name) {
+  return `Hello ${name}`;
 }
-console.log(result);
+
+alert(greet(userName));
