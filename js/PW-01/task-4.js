@@ -33,3 +33,18 @@ function toggleModalVisibility(isVisible) {
 console.log(toggleModalVisibility(true));
 console.log(toggleModalVisibility(false));
 */
+
+// ==== task 4
+// Функція getSubstring(string, length) приймає рядок і повертає новий підрядок (його часткову копію).
+// Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+
+// string - оригінальний рядок
+// length - довжина нового підрядка
+// Доповни код функції так, щоб вона повертала новий підрядок, який починається від початку string і має довжину length.
+
+function getSubstring(string, length) {
+  return string.slice(0, length);
+}
+console.log(getSubstring('Hello world', 3));
+console.log(getSubstring('Hello world', 11));
+console.log(getSubstring('Hello world', 8));
