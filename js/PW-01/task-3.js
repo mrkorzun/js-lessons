@@ -183,6 +183,7 @@ console.log(calcArea(4.9, 3.2));
 // і меншим або дорівнювати end.
 // Результатом виклику функції має бути буль true або false.
 
+/*
 function isNumberInRange(start, end, number) {
   return number >= start && number <= end;
 }
@@ -190,3 +191,4 @@ console.log(isNumberInRange(10, 30, 17));
 console.log(isNumberInRange(10, 30, 5));
 console.log(isNumberInRange(20, 50, 24));
 console.log(isNumberInRange(20, 50, 76));
+*/
