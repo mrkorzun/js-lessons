@@ -80,3 +80,28 @@ function normalizeInput(input, to) {
 console.log(normalizeInput("This ISN'T SpaM", 'upper'));
 console.log(normalizeInput("This ISN'T SpaM", 'lower'));
 */
+
+// ==== task 6
+
+// Функція checkForName(fullName, firstName) приймає два параметри
+// та повертає буль true або false - результат перевірки
+// входження підрядка firstName у рядок fullName.
+
+// fullName - рядок, що містить повне ім'я
+// firstName - рядок, що містить ім'я для перевірки його входження в повне ім'я
+// Доповни тіло функції таким чином,
+// щоб вона повертала результат перевірки входження імені (параметр firstName),
+// у повне ім'я (параметр fullName).
+// Врахуй, що регістр символів в параметрах fullName і firstName наперед не відомий.
+// Перед перевіркою входження не забудь прирівняти їх до однакового регістру.
+
+function checkForName(fullName, firstName) {
+  let checkCaseFullName = fullName.toLowerCase();
+  let checkCasefirstName = firstName.toLowerCase();
+
+  return checkCaseFullName.includes(checkCasefirstName);
+}
+console.log(checkForName('Jason Neis', 'Jason'));
+console.log(checkForName('Jason Neis', 'jAsOn'));
+console.log(checkForName('Caty Stars', 'cAtY'));
+console.log(checkForName('Caty Stars', 'Andromeda'));
