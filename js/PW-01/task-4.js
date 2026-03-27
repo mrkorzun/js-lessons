@@ -94,7 +94,7 @@ console.log(normalizeInput("This ISN'T SpaM", 'lower'));
 // у повне ім'я (параметр fullName).
 // Врахуй, що регістр символів в параметрах fullName і firstName наперед не відомий.
 // Перед перевіркою входження не забудь прирівняти їх до однакового регістру.
-
+/*
 function checkForName(fullName, firstName) {
   let checkCaseFullName = fullName.toLowerCase();
   let checkCasefirstName = firstName.toLowerCase();
@@ -105,3 +105,54 @@ console.log(checkForName('Jason Neis', 'Jason'));
 console.log(checkForName('Jason Neis', 'jAsOn'));
 console.log(checkForName('Caty Stars', 'cAtY'));
 console.log(checkForName('Caty Stars', 'Andromeda'));
+*/
+
+// ==== task 7
+
+// Функція checkFileExtension(fileName, ext) приймає два параметри:
+
+// fileName - рядок, що зберігає ім'я файлу з розширенням, наприклад, styles.css, hello.js тощо.
+// ext - рядок, що зберігає розширення, наприклад, .css, .js тощо
+// Доповни код функції так, щоб:
+
+// Якщо ім'я файлу fileName закінчується розширенням, зазначеним у параметрі ext,
+// то функція повертала рядок "File extension matches"
+// В іншому разі, функція повертала рядок
+/*
+function checkFileExtension(fileName, ext) {
+  return fileName.endsWith(ext)
+    ? 'File extension matches'
+    : 'File extension does not match';
+}
+console.log(checkFileExtension('styles.css', '.css')); // повертає "File extension matches"
+console.log(checkFileExtension('styles.css', '.js')); // "File extension does not match"
+*/
+
+/*
+TODO: Пошук у рядку методом includes()
+TODO:
+TODO: Напиши функцію isStrIncludesForbiddenWords(string, blacklistedWord1, blacklistedWord2),
+TODO: яка буде перевіряти чи є у рядку заборонені слова.
+TODO: Параметри функції:
+TODO: string - рядок;
+TODO: blacklistedWord1 - перше заборонене слово;
+TODO: blacklistedWord2 - друге заборонене слово.
+TODO: Функція має повернути true або false.
+*/
+
+function isStrIncludesForbiddenWords(str, blacklistedWord1, blacklistedWord2) {
+  str = str.toLowerCase();
+  blacklistedWord1 = blacklistedWord1.toLowerCase();
+  blacklistedWord2 = blacklistedWord2.toLowerCase();
+
+  return str.includes(blacklistedWord1) || str.includes(blacklistedWord2);
+}
+
+const string1 =
+  "Hello, I'm Prince Abdul, this is not spam, I'm offering you a million!";
+const string2 = "Biggest SALE this week, don't miss out!";
+const string3 = '#fatlivesmatter advertising campaign';
+
+console.log(isStrIncludesForbiddenWords(string1, 'spam', 'sale'));
+console.log(isStrIncludesForbiddenWords(string2, 'spam', 'sale'));
+console.log(isStrIncludesForbiddenWords(string3, 'spam', 'sale'));
