@@ -11,7 +11,18 @@
 // Якщо ім'я файлу не містить розширення, то функція повертала новий підрядок, що містить ім'я файлу без змін
 // В іншому разі функція повертала підрядок з іменем файлу, але без розширення
 
-function getFileName(file) {}
+function getFileName(file) {
+  // const index = file.indexOf('.');
+  //   if (index === -1) {
+  //     return file;
+  //   } else {
+  //     return file.slice(0, index);
+  //   }
+
+  // second variant
+  const index = file.indexOf('.');
+  return index === -1 ? file : file.slice(0, index);
+}
 
 console.log(getFileName('styles.css')); // повертає "styles"
 console.log(getFileName('app.js')); // повертає "app"
