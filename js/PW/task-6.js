@@ -68,7 +68,7 @@ console.log(getLastElementMeta(['apple']));
 // Функція getExtremeElements(array) приймає один параметр array - масив елементів довільної довжини.
 // Доповни код функції таким чином, щоб вона
 // повертала масив з двох елементів - першого і останнього елементів параметра array.
-
+/*
 function getExtremeElements(array) {
   // const lastIndex = array.length - 1;
 
@@ -78,3 +78,4 @@ function getExtremeElements(array) {
 console.log(getExtremeElements([1, 2, 3, 4, 5])); // [1, 5]
 console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); //повертає ["Earth", "Venus"]
 console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); //повертає ["apple", "banana"]
+*/
