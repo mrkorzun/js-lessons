@@ -53,8 +53,9 @@ getOrderQuantity(['apple', 'banana', 'pear']);
 // другий елемент - це значення останнього елементу у масиві array
 
 function getLastElementMeta(array) {
-  let firstElement = array.indexOf();
-  let secondElement = array.
+  for (let i = 0; i < array.length; i++) {
+    console.log(`${i}, ${array[i]}`);
+  }
 }
 
 console.log(getLastElementMeta(['apple', 'peach', 'pear', 'banana']));

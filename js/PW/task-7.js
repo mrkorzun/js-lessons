@@ -10,7 +10,7 @@
 
 // indexOf - only one item
 // length - all elements
-
+/*
 const styles = ['jazz', 'blues'];
 styles.push('rock-n-roll'); // add
 const findIndex = styles.indexOf('blues'); // find index
@@ -27,3 +27,32 @@ function logItems(array) {
 }
 
 logItems(styles);
+*/
+
+// Напишіть функцію checkLogin(array), яка:
+// Приймає масив логінів як аргумент.
+// Запитує ім'я користувача через prompt.
+// Перевіряє, чи є введене ім'я у переданому масиві.
+// Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
+// Якщо ім'я відсутнє – виводить повідомлення: "User not found".
+/*
+const logins = ['Peter', 'John', 'Igor', 'Sasha'];
+
+function checkLogin(array) {
+  const userName = prompt('Введите имя:');
+  if (array.includes(userName)) {
+    return `Welcome, ${userName}!`;
+  }
+  return 'User not found';
+}
+alert(checkLogin(logins));
+*/
+
+// Напишіть функцію caclculateAverage(),
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додайте перевірку, що аргументи - це числа.
+
+function calculateAverage() {}
+
+calculateAverage();
