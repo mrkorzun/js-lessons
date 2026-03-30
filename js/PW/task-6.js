@@ -51,14 +51,30 @@ getOrderQuantity(['apple', 'banana', 'pear']);
 
 // перший елемент - це індекс останнього елементу у масиві array
 // другий елемент - це значення останнього елементу у масиві array
-
+/*
 function getLastElementMeta(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.log(`${i}, ${array[i]}`);
-  }
+  const lastIndex = array.length - 1; // сначала находим индекс масива
+  const lastElement = array[lastIndex]; // ищем элемент масыва
+
+  return [lastIndex, lastElement]; // выводим индекс и элемент масыва вместе
 }
 
 console.log(getLastElementMeta(['apple', 'peach', 'pear', 'banana']));
 console.log(getLastElementMeta(['apple', 'peach', 'pear']));
 console.log(getLastElementMeta(['apple', 'peach']));
 console.log(getLastElementMeta(['apple']));
+*/
+
+// Функція getExtremeElements(array) приймає один параметр array - масив елементів довільної довжини.
+// Доповни код функції таким чином, щоб вона
+// повертала масив з двох елементів - першого і останнього елементів параметра array.
+
+function getExtremeElements(array) {
+  // const lastIndex = array.length - 1;
+
+  return [array[0], array[array.length - 1]];
+}
+
+console.log(getExtremeElements([1, 2, 3, 4, 5])); // [1, 5]
+console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); //повертає ["Earth", "Venus"]
+console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); //повертає ["apple", "banana"]
