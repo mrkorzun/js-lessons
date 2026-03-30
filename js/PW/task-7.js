@@ -52,20 +52,20 @@ alert(checkLogin(logins));
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
-
+/*
 function calculateAverage(...numbers) {
-  /* все буде складатися в array все що после ... */
+ // все буде складатися в array все що после ... 
   let totalSum = 0;
   let count = 0;
   for (const number of numbers) {
-    // перебор
+    // перебор 
     if (typeof number === 'number') {
-      // проверка числа ли
+      // проверка числа 
       totalSum += number;
       count++;
     }
   }
-  //  если пусто то выведем сообщение
+  // если пусто то выведем сообщение 
   if (totalSum !== 0 && count !== 0) {
     return totalSum / count;
   }
@@ -74,3 +74,25 @@ function calculateAverage(...numbers) {
 }
 
 console.log(calculateAverage(5, 10, 15, 'Hello'));
+*/
+
+// Напишіть функцію, яка сумуватиме сусідні числа
+// і пушитиме їх в новий масив.
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// уточнення: складати необхідно перше число з другим, потім друге - з третім,
+// третє - з четвертим і так до кінця.
+// В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+function sumNeighbors(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    newArr.push(arr[i] + arr[i + 1]);
+  }
+  return newArr;
+}
+
+console.log(sumNeighbors(someArr));
