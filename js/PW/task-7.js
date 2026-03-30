@@ -17,7 +17,7 @@ const findIndex = styles.indexOf('blues'); // find index
 
 if (findIndex !== -1) {
   //   styles[findIndex] = 'classic';
-  styles.splice(findIndex, 1, 'classic');
+  styles.splice(findIndex, 1, 'classic'); // find, delete and write 'classic'
 }
 
 function logItems(array) {
