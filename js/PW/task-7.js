@@ -53,6 +53,24 @@ alert(checkLogin(logins));
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
 
-function calculateAverage() {}
+function calculateAverage(...numbers) {
+  /* все буде складатися в array все що после ... */
+  let totalSum = 0;
+  let count = 0;
+  for (const number of numbers) {
+    // перебор
+    if (typeof number === 'number') {
+      // проверка числа ли
+      totalSum += number;
+      count++;
+    }
+  }
+  //  если пусто то выведем сообщение
+  if (totalSum !== 0 && count !== 0) {
+    return totalSum / count;
+  }
 
-calculateAverage();
+  return 'Невозможная операция - на 0 делить нельзя';
+}
+
+console.log(calculateAverage(5, 10, 15, 'Hello'));
