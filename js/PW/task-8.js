@@ -88,7 +88,7 @@ console.log(calculateTotalPrice([])); // []
 // Використовуй цикл або метод масиву toReversed(),
 // який застосовується до масиву і результатом роботи повертає новий масив
 // з елементами у зворотньому порядку.
-
+/*
 function createReversedArray() {
   const arr = Array.from(arguments); // переводим в масив из псевдомасива
   return arr.toReversed(); // переворачиваем
@@ -98,5 +98,20 @@ console.log(createReversedArray(12, 85, 37, 4)); // [4, 37, 85, 12]
 console.log(createReversedArray(164, 48, 291)); // [291, 48, 164]
 console.log(createReversedArray(412, 371, 94, 63, 176)); // [176, 63, 94, 371, 412]
 console.log(createReversedArray()); // []
+*/
 
 // ===== TASK 5 =====
+// Функція calculateTax(amount, taxRate) оголошує два параметри:
+
+// amount - число, сума від якої потрібно обчислити податок. Обов'язковий параметр.
+// taxRate - число, податкова ставка. Необов'язковий параметр. За замовчуванням його значення має бути 0.2.
+// Доповни код функції так, щоб вона повертала суму податку - результат множення суми на податкову ставку.
+
+function calculateTax(amount, taxRate = 0.2) {
+  return amount * taxRate;
+}
+
+console.log(calculateTax(100, 0.1)); // 10
+console.log(calculateTax(200, 0.2)); // 40
+console.log(calculateTax(200, 0.3)); // 60
+console.log(calculateTax(200)); // 40
