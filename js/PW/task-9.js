@@ -107,19 +107,19 @@ const data = {
   numbers: [4, 7, 2, 4, 9, 7, 4, 1, 2, 8, 2],
 };
 
-const dublicatesOnly = [];
+const duplicatesOnly = [];
 const dataNumbers = data.numbers;
 
 for (const num of dataNumbers) {
   if (dataNumbers.indexOf(num) !== dataNumbers.lastIndexOf(num)) {
     //double?
-    if (!dublicatesOnly.includes(num)) {
+    if (!duplicatesOnly.includes(num)) {
       // do we have double//
-      dublicatesOnly.push(num); // push if we don't have
+      duplicatesOnly.push(num); // push if we don't have
     }
   }
 }
-console.log(dublicatesOnly);
+console.log(duplicatesOnly);
 
 // Очікуваний результат:
 // [4, 7, 2]
