@@ -223,3 +223,37 @@ const products = [
 // з кожного об’єкта зберись рядок через шаблонний рядок
 // додай цей рядок у новий масив
 // виведи результат
+
+const products = [
+  { name: 'Samsung J5 2017', screen: 5.2, price: 5400, weight: 160 },
+  { name: 'iPhone X', screen: 5.8, price: 25000, weight: 170 },
+  { name: 'Xiaomi Mi 4', screen: 5.5, price: 4999, weight: 150 },
+  { name: 'Nokia 3310 2018', screen: 2.4, price: 999, weight: 60 },
+  { name: 'iPhone 7', screen: 4.7, price: 9999, weight: 140 },
+];
+
+const createInfOfProducts = function (arrayProducts) {
+  const informArray = [];
+  for (const product of arrayProducts) {
+    informArray.push(
+      `${product.name}: ${product.price} грн, ${product.screen} дюйма, ${product.weight} г`
+    );
+  }
+  return informArray;
+};
+
+function findPhones(products, phone) {
+  const phones = [];
+
+  for (const product of products) {
+    if (product.name.includes(phone)) {
+      phones.push(product);
+    }
+  }
+
+  return phones.length > 0
+    ? createInfOfProducts(phones).join('; ')
+    : 'Такого товару не знайдено';
+}
+
+console.log(findPhones(products, 'iPhone'));
