@@ -101,7 +101,7 @@ console.log(rgbColors);
 // 2. Створи новий масив duplicatesOnly
 // 3. Додай у duplicatesOnly тільки ті числа, які повторюються
 // 4. Але! У duplicatesOnly кожне число має бути лише один раз
-
+/*
 const data = {
   shop: 'Numbers Store',
   numbers: [4, 7, 2, 4, 9, 7, 4, 1, 2, 8, 2],
@@ -120,7 +120,7 @@ for (const num of dataNumbers) {
   }
 }
 console.log(duplicatesOnly);
-
+*/
 // Очікуваний результат:
 // [4, 7, 2]
 
@@ -136,7 +136,7 @@ console.log(duplicatesOnly);
 // на кожній ітерації перевір price
 // якщо ціна входить у діапазон — додай весь об’єкт товару в result
 // в кінці виведи result
-
+/*
 const products = [
   { name: 'Samsung J5 2017', screen: 5.2, price: 5400, weight: 160 },
   { name: 'iPhone X', screen: 5.8, price: 25000, weight: 170 },
@@ -147,3 +147,16 @@ const products = [
 
 const minPrice = 2000;
 const maxPrice = 10000;
+
+function filterProducts(minPrice, maxPrice, products) {
+  const result = [];
+
+  for (const product of products) {
+    if (product.price >= minPrice && product.price <= maxPrice) {
+      result.push(product);
+    }
+  }
+  return result;
+}
+console.log(filterProducts(minPrice, maxPrice, products));
+*/
