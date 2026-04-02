@@ -161,7 +161,7 @@ function filterProducts(minPrice, maxPrice, products) {
 console.log(filterProducts(minPrice, maxPrice, products));
 */
 
-//Задача 4. Знайти всі iPhone
+// ===== TASK 6 ===== Знайти всі iPhone
 // Дано
 const products = [
   { name: 'Samsung J5 2017', screen: 5.2, price: 5400, weight: 160 },
