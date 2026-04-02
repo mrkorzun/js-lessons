@@ -71,7 +71,7 @@ console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 })); // 400
 // Додай у масив hexColors значення властивостей hex,
 // а в масив rgbColors - значення властивостей rgb
 // з усіх об'єктів масиву colors.
-
+/*
 const colors = [
   { hex: '#f44336', rgb: '244,67,54' },
   { hex: '#2196f3', rgb: '33,150,243' },
@@ -88,6 +88,7 @@ for (const color of colors) {
 }
 console.log(hexColors);
 console.log(rgbColors);
+*/
 
 // Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
 // Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
@@ -105,6 +106,20 @@ const data = {
   shop: 'Numbers Store',
   numbers: [4, 7, 2, 4, 9, 7, 4, 1, 2, 8, 2],
 };
+
+const dublicatesOnly = [];
+const dataNumbers = data.numbers;
+
+for (const num of dataNumbers) {
+  if (dataNumbers.indexOf(num) !== dataNumbers.lastIndexOf(num)) {
+    //double?
+    if (!dublicatesOnly.includes(num)) {
+      // do we have double//
+      dublicatesOnly.push(num); // push if we don't have
+    }
+  }
+}
+console.log(dublicatesOnly);
 
 // Очікуваний результат:
 // [4, 7, 2]
