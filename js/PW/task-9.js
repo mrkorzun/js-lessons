@@ -1,3 +1,5 @@
+// ==== TASK 1 =====
+
 // Додай об'єкту apartment кілька нових властивостей:
 
 // area - площа в квадратних метрах, число 60;
@@ -10,7 +12,7 @@
 // до ще не створеної властивості location, ви отримаєте помилку.
 // Спочатку ініціалізуйте location як порожній об'єкт,
 // а потім додавайте до нього властивості.
-
+/*
 const apartment = {
   imgUrl: 'https://via.placeholder.com/640x480',
   descr: 'Spacious apartment in the city center',
@@ -33,3 +35,28 @@ apartment.location = {
 };
 
 console.log(apartment);
+*/
+
+// ==== TASK 2 =====
+// Функція countTotalSalary(salaries) приймає об'єкт зарплат (salaries)
+// в якості параметра.
+// Кожна властивість об'єкта salaries — це ключ,
+// що містить ім'я співробітника, та значення - його відповідна зарплатня.
+
+// Доповни код функції countTotalSalary(salaries) так,
+// щоб вона повертала загальну суму зарплат всіх співробітників.
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  const salariesKey = Object.keys(salaries);
+
+  for (const key of salariesKey) {
+    totalSalary += salaries[key];
+  }
+
+  return totalSalary;
+}
+
+console.log(countTotalSalary({})); // 0
+console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 })); // 330
+console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 })); // 400
