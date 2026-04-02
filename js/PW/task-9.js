@@ -123,3 +123,57 @@ console.log(duplicatesOnly);
 
 // Очікуваний результат:
 // [4, 7, 2]
+
+// === TASK 5 ====
+const data = {
+  shop: 'Numbers Store',
+  numbers: [4, 7, 2, 4, 9, 7, 4, 1, 2, 8, 2],
+};
+
+const num = data.numbers;
+const duplicatesOnly = [];
+
+for (const numb of num) {
+  if (
+    num.indexOf(numb) !== num.lastIndexOf(numb) &&
+    !duplicatesOnly.includes(numb)
+  ) {
+    duplicatesOnly.push(numb);
+  }
+}
+console.log(duplicatesOnly);
+// Очікуваний результат:
+// [4, 7, 2]
+
+працює, просто умова довша рішення
+
+Маргарита Голуб
+5:27 PM
+++
+
+Bohdana Turcheniak
+5:28 PM
+Вибрати товари в діапазоні цін
+Дано
+const products = [
+  { name: "Samsung J5 2017", screen: 5.2, price: 5400, weight: 160 },
+  { name: "iPhone X", screen: 5.8, price: 25000, weight: 170 },
+  { name: "Xiaomi Mi 4", screen: 5.5, price: 4999, weight: 150 },
+  { name: "Nokia 3310 2018", screen: 2.4, price: 999, weight: 60 },
+  { name: "iPhone 7", screen: 4.7, price: 9999, weight: 140 }
+];
+
+const minPrice = 2000;
+const maxPrice = 10000;
+Потрібно
+
+Створи новий масив result, у який потраплять тільки ті товари, чия ціна:
+
+більша або дорівнює minPrice
+менша або дорівнює maxPrice
+TODO
+створи порожній масив result
+перебери масив products
+на кожній ітерації перевір price
+якщо ціна входить у діапазон — додай весь об’єкт товару в result
+в кінці виведи result
