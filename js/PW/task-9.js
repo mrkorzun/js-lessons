@@ -160,3 +160,66 @@ function filterProducts(minPrice, maxPrice, products) {
 }
 console.log(filterProducts(minPrice, maxPrice, products));
 */
+
+//Задача 4. Знайти всі iPhone
+// Дано
+const products = [
+  { name: 'Samsung J5 2017', screen: 5.2, price: 5400, weight: 160 },
+  { name: 'iPhone X', screen: 5.8, price: 25000, weight: 170 },
+  { name: 'Xiaomi Mi 4', screen: 5.5, price: 4999, weight: 150 },
+  { name: 'Nokia 3310 2018', screen: 2.4, price: 999, weight: 60 },
+  { name: 'iPhone 7', screen: 4.7, price: 9999, weight: 140 },
+];
+// Потрібно
+// Створи масив, у який потраплять тільки ті товари, в назві яких є слово "iPhone".
+// TODO
+// • створи порожній масив
+// • перебери products
+// • для кожного товару перевір name.includes("iPhone")
+// • якщо так — додавай товар у результат
+// • виведи новий масив
+// Що тренуєш
+// • роботу з рядками
+// • includes()
+// • пошук за текстовою властивістю
+
+// const products = [
+//   { name: "Samsung J5 2017", screen: 5.2, price: 5400, weight: 160 },
+//   { name: "iPhone X", screen: 5.8, price: 25000, weight: 170 },
+//   { name: "Xiaomi Mi 4", screen: 5.5, price: 4999, weight: 150 },
+//   { name: "Nokia 3310 2018", screen: 2.4, price: 999, weight: 60 },
+//   { name: "iPhone 7", screen: 4.7, price: 9999, weight: 140 }
+// ];
+
+// const createInfOfProducts = function (arrayProducts) {
+//     const informArray = [];
+//     for (const product of arrayProducts) {
+//       informArray.push(`${product.name}: ${product.price} грн, ${product.screen} дюйма, ${product.weight} г`);
+//     }
+//     return informArray;
+// }
+
+// console.log(createInfOfProducts(products));
+
+// ===== TASK 7 =====
+
+//Скласти короткий опис кожного товару
+// Дано
+const products = [
+  { name: 'Samsung J5 2017', screen: 5.2, price: 5400, weight: 160 },
+  { name: 'iPhone X', screen: 5.8, price: 25000, weight: 170 },
+  { name: 'Xiaomi Mi 4', screen: 5.5, price: 4999, weight: 150 },
+  { name: 'Nokia 3310 2018', screen: 2.4, price: 999, weight: 60 },
+  { name: 'iPhone 7', screen: 4.7, price: 9999, weight: 140 },
+];
+// Потрібно
+
+// Створи масив рядків такого формату:
+
+// "Samsung J5 2017: 5400 грн, 5.2 дюйма, 160 г"
+// TODO
+// створи порожній масив
+// перебери товари
+// з кожного об’єкта зберись рядок через шаблонний рядок
+// додай цей рядок у новий масив
+// виведи результат
