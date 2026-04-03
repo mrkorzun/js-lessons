@@ -36,7 +36,7 @@ console.table(newUsers);
 // ==== TASK 2 ====
 // Додати метод getAddress(), який повертає:
 // "Kyiv, Ukraine"
-
+/*
 const user = {
   name: 'Anna',
   address: {
@@ -44,3 +44,58 @@ const user = {
     country: 'Ukraine',
   },
 };
+*/
+
+// ==== TASK 3 ====
+//TODO:===============================
+// Кошик: додати товар, порахувати суму, знайти товар
+
+// getItems(); // має повертати масив товарів
+// addItem(product); // має додавати новий товар у items
+// getTotalPrice(); // має повертати загальну суму з урахуванням price * quantity
+// findItem(productName); // має повертати об’єкт товару з таким ім’ям або null, якщо товар не знайдено
+
+// TODO
+// усюди використовуй this.items
+// у getTotalPrice() перебери масив і склади підсумок
+// у findItem() перебери масив і знайди товар по name
+// у addItem() додай новий об’єкт у масив
+// Потрібно
+// Додати в об’єкт cart методи:
+
+const cart = {
+  owner: 'Anna',
+  items: [
+    { name: 'phone', price: 12000, quantity: 1 },
+    { name: 'case', price: 500, quantity: 2 },
+  ],
+  getItems() {
+    return this.items;
+  },
+  addItem(product) {
+    this.items.push(product);
+  },
+  getTotalPrice() {
+    let total = 0;
+    for (const item of this.items) {
+      total += item.price * item.quantity;
+    }
+    return total;
+  },
+  findItem(productName) {
+    for (const item of this.items) {
+      if (item.name === productName) {
+        return item;
+      }
+    }
+    return null;
+  },
+};
+
+// Перевірка
+console.log(cart.getItems());
+cart.addItem({ name: 'charger', price: 800, quantity: 1 });
+console.log(cart.getItems());
+console.log(cart.getTotalPrice());
+console.log(cart.findItem('phone'));
+console.log(cart.findItem('tablet'));
