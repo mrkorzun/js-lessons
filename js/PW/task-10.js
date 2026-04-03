@@ -104,9 +104,41 @@ console.log(cart.findItem('tablet'));
 // ==== TASK 3 ====
 // Створіть об'єкт calculator з наступними методами:
 // read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
-// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
-// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+// sum() - повертає сумму збереженних значень
+// (з перевіркою на наявність властивостей в об'єкті),
+// mult() - перемножає збереженні значення і повертає результат
+// (з перевіркою на наявність властивостей в об'єкті),
 // винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
+
+const calculator = {
+  read(a, b) {
+    this.a = a;
+    this.b = b;
+  },
+  exist() {
+    if (this.a !== undefined && this.b !== undefined) {
+      return true;
+    }
+    return false;
+  },
+  sum() {
+    if (this.exist()) {
+      return this.a + this.b;
+    }
+  },
+  mult() {
+    if (this.exist()) {
+      return this.a * this.b;
+    }
+    return 'No such propeties';
+  },
+};
+
+calculator.read(5, 5);
+console.log(calculator.exist());
+console.log(calculator.sum());
+console.log(calculator.mult());
+console.log(calculator);
