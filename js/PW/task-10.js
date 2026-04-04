@@ -157,6 +157,14 @@ console.log(calculator);
 // в масиві products і повертала його ціну (властивість price).
 // Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
 
+function getProductPrice(productName) {
+  const products = [
+    { name: 'Radar', price: 1300, quantity: 4 },
+    { name: 'Scanner', price: 2700, quantity: 3 },
+    { name: 'Droid', price: 400, quantity: 7 },
+    { name: 'Grip', price: 1200, quantity: 9 },
+  ];
+}
 console.log(getProductPrice('Radar')); // повертає 1300.
 console.log(getProductPrice('Grip')); // повертає 1200.
 console.log(getProductPrice('Scanner')); // повертає 2700.
