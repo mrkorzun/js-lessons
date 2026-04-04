@@ -112,7 +112,7 @@ console.log(cart.findItem('tablet'));
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
-
+/*
 const calculator = {
   read(a, b) {
     this.a = a;
@@ -142,3 +142,23 @@ console.log(calculator.exist());
 console.log(calculator.sum());
 console.log(calculator.mult());
 console.log(calculator);
+*/
+
+// ==== TASK 4 ====
+
+// Функція getProductPrice(productName)
+// приймає один параметр productName - назва продукту.
+
+// Функція містить масив об'єктів products з такими властивостями,
+// як name — ім'я товару, price — ціна і quantity — кількість.
+
+// Доповни код функції так,
+// щоб вона шукала об'єкт продукту з певним ім'ям (властивість name)
+// в масиві products і повертала його ціну (властивість price).
+// Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
+
+console.log(getProductPrice('Radar')); // повертає 1300.
+console.log(getProductPrice('Grip')); // повертає 1200.
+console.log(getProductPrice('Scanner')); // повертає 2700.
+console.log(getProductPrice('Droid')); // повертає 400.
+console.log(getProductPrice('Engine')); // повертає null.
