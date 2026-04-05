@@ -292,7 +292,7 @@ console.table(getAllPropValues('category')); // повертає []
 // Якщо продукту з такою назвою немає,
 // функція повинна повертати рядок:
 // "Product <productName> not found!"
-
+/*
 function calculateTotalPrice(productName) {
   const products = [
     { name: 'Radar', price: 1300, quantity: 4 },
@@ -315,3 +315,24 @@ console.log(calculateTotalPrice('Radar')); // 5200
 console.log(calculateTotalPrice('Droid')); // 2800
 console.log(calculateTotalPrice('Grip')); // 10800
 console.log(calculateTotalPrice('Scanner')); // 8100
+*/
+
+// ==== TASK: Potion Shop "At The Old Toad" ====
+// Оголоси об'єкт atTheOldToad з наступними властивостями:
+//
+// potions — порожній масив для зберігання зіль
+//
+// getPotions() — метод, який повертає рядок:
+// "List of all available potions"
+//
+// addPotion(potionName) — метод, який повертає рядок:
+// "Adding <potionName>"
+
+const atTheOldToad = {
+  // твой код здесь
+};
+
+console.log(atTheOldToad.potions); // []
+console.log(atTheOldToad.getPotions()); // "List of all available potions"
+console.log(atTheOldToad.addPotion('Invisibility')); // "Adding Invisibility"
+console.log(atTheOldToad.addPotion('Power potion')); // "Adding Power potion"
