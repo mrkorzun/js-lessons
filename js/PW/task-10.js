@@ -156,7 +156,7 @@ console.log(calculator);
 // щоб вона шукала об'єкт продукту з певним ім'ям (властивість name)
 // в масиві products і повертала його ціну (властивість price).
 // Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
-
+/*
 function getProductPrice(productName) {
   const products = [
     { name: 'Radar', price: 1300, quantity: 4 },
@@ -164,9 +164,11 @@ function getProductPrice(productName) {
     { name: 'Droid', price: 400, quantity: 7 },
     { name: 'Grip', price: 1200, quantity: 9 },
   ];
+  console.table(products);
 
   for (const product of products) {
     if (product['name'] === productName) {
+      // return `${product['name']} - price: ${product['price']}`;
       return product['price'];
     }
   }
@@ -177,3 +179,30 @@ console.log(getProductPrice('Grip')); // повертає 1200.
 console.log(getProductPrice('Scanner')); // повертає 2700.
 console.log(getProductPrice('Droid')); // повертає 400.
 console.log(getProductPrice('Engine')); // повертає null.
+*/
+
+// ==== TASK: Find User Email ====
+// Ты разрабатываешь систему авторизации.
+// Функция getUserEmail(username) принимает имя пользователя.
+// Внутри функции есть массив объектов users.
+// Каждый пользователь имеет свойства: username, email, role.
+//
+// Дополни функцию так, чтобы она:
+// 1. Искала пользователя по username
+// 2. Возвращала его email
+// 3. Если пользователь не найден — возвращала null
+
+function getUserEmail(username) {
+  const users = [
+    { username: 'john_doe', email: 'john@gmail.com', role: 'admin' },
+    { username: 'jane_smith', email: 'jane@gmail.com', role: 'editor' },
+    { username: 'bob_martin', email: 'bob@gmail.com', role: 'viewer' },
+    { username: 'alice_dev', email: 'alice@gmail.com', role: 'editor' },
+  ];
+
+  // твой код здесь
+}
+
+console.log(getUserEmail('john_doe')); // john@gmail.com
+console.log(getUserEmail('alice_dev')); // alice@gmail.com
+console.log(getUserEmail('hacker')); // null
