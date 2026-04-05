@@ -191,7 +191,7 @@ console.log(getProductPrice('Engine')); // повертає null.
 // 1. Искала пользователя по username
 // 2. Возвращала его email
 // 3. Если пользователь не найден — возвращала null
-
+/*
 function getUserEmail(username) {
   const users = [
     { username: 'john_doe', email: 'john@gmail.com', role: 'admin' },
@@ -212,3 +212,36 @@ function getUserEmail(username) {
 console.log(getUserEmail('john_doe')); // john@gmail.com
 console.log(getUserEmail('alice_dev')); // alice@gmail.com
 console.log(getUserEmail('hacker')); // null
+*/
+
+// ==== TASK: Online Store Cart ====
+// Ты разрабатываешь корзину интернет-магазина.
+// Функция getProductInfo(productId) принимает id продукта.
+// Внутри функции есть массив объектов cart.
+// Каждый продукт имеет свойства: id, name, price, quantity.
+//
+// Дополни функцию так, чтобы она:
+// 1. Искала продукт по id
+// 2. Возвращала строку: "Назва: {name}, Ціна: {price}, Кількість: {quantity}"
+// 3. Если продукт не найден — возвращала "Продукт не знайдено"
+
+function getProductInfo(productId) {
+  const cart = [
+    { id: 1, name: 'Laptop', price: 999, quantity: 1 },
+    { id: 2, name: 'Mouse', price: 25, quantity: 2 },
+    { id: 3, name: 'Keyboard', price: 75, quantity: 1 },
+    { id: 4, name: 'Monitor', price: 350, quantity: 2 },
+  ];
+
+  // твой код здесь
+  for (const product of cart) {
+    if (product['id'] === productId) {
+      return `Назва: ${product['name']}, Ціна: ${product['price']}, Кількість: ${product['quantity']}`;
+    }
+  }
+  return `Продукт не знайдено`;
+}
+
+console.log(getProductInfo(1)); // "Назва: Laptop, Ціна: 999, Кількість: 1"
+console.log(getProductInfo(3)); // "Назва: Keyboard, Ціна: 75, Кількість: 1"
+console.log(getProductInfo(9)); // "Продукт не знайдено"
