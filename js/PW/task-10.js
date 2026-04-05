@@ -224,7 +224,7 @@ console.log(getUserEmail('hacker')); // null
 // 1. Искала продукт по id
 // 2. Возвращала строку: "Назва: {name}, Ціна: {price}, Кількість: {quantity}"
 // 3. Если продукт не найден — возвращала "Продукт не знайдено"
-
+/*
 function getProductInfo(productId) {
   const cart = [
     { id: 1, name: 'Laptop', price: 999, quantity: 1 },
@@ -245,3 +245,31 @@ function getProductInfo(productId) {
 console.log(getProductInfo(1)); // "Назва: Laptop, Ціна: 999, Кількість: 1"
 console.log(getProductInfo(3)); // "Назва: Keyboard, Ціна: 75, Кількість: 1"
 console.log(getProductInfo(9)); // "Продукт не знайдено"
+*/
+
+// Напиши функцію getAllPropValues(propName),
+// яка приймає один параметр propName - ім'я (ключ) властивості.
+// Функція повинна повернути масив усіх значень властивості
+// з таким ім'ям з кожного об'єкта в масиві products.
+// Якщо в об'єктах відсутні властивості з таким ім'ям,
+// функція повинна повернути порожній масив.
+
+function getAllPropValues(propName) {
+  const products = [
+    { name: 'Radar', price: 1300, quantity: 4 },
+    { name: 'Scanner', price: 2700, quantity: 3 },
+    { name: 'Droid', price: 400, quantity: 7 },
+    { name: 'Grip', price: 1200, quantity: 9 },
+  ];
+  const result = [];
+
+  for (const product of products) {
+    result.push(product[propName]);
+  }
+  return result;
+}
+
+console.table(getAllPropValues('name')); // повертає ["Radar", "Scanner", "Droid", "Grip"]
+console.table(getAllPropValues('quantity')); // повертає [4, 3, 7, 9]
+console.table(getAllPropValues('price')); // повертає [1300, 2700, 400, 1200]
+console.table(getAllPropValues('category')); // повертає []
