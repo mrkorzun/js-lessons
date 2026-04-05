@@ -164,6 +164,13 @@ function getProductPrice(productName) {
     { name: 'Droid', price: 400, quantity: 7 },
     { name: 'Grip', price: 1200, quantity: 9 },
   ];
+
+  for (const product of products) {
+    if (product['name'] === productName) {
+      return product['price'];
+    }
+  }
+  return null;
 }
 console.log(getProductPrice('Radar')); // повертає 1300.
 console.log(getProductPrice('Grip')); // повертає 1200.
