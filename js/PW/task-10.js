@@ -201,6 +201,12 @@ function getUserEmail(username) {
   ];
 
   // твой код здесь
+  for (const user of users) {
+    if (user['username'] === username) {
+      return user['email'];
+    }
+  }
+  return null;
 }
 
 console.log(getUserEmail('john_doe')); // john@gmail.com
