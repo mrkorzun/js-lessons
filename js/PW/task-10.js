@@ -253,7 +253,7 @@ console.log(getProductInfo(9)); // "Продукт не знайдено"
 // з таким ім'ям з кожного об'єкта в масиві products.
 // Якщо в об'єктах відсутні властивості з таким ім'ям,
 // функція повинна повернути порожній масив.
-
+/*
 function getAllPropValues(propName) {
   const products = [
     { name: 'Radar', price: 1300, quantity: 4 },
@@ -264,7 +264,9 @@ function getAllPropValues(propName) {
   const result = [];
 
   for (const product of products) {
-    result.push(product[propName]);
+    if (product[propName] !== undefined) {
+      result.push(product[propName]);
+    }
   }
   return result;
 }
@@ -273,3 +275,43 @@ console.table(getAllPropValues('name')); // повертає ["Radar", "Scanner"
 console.table(getAllPropValues('quantity')); // повертає [4, 3, 7, 9]
 console.table(getAllPropValues('price')); // повертає [1300, 2700, 400, 1200]
 console.table(getAllPropValues('category')); // повертає []
+*/
+
+// ==== TASK 2====
+// Функція calculateTotalPrice(productName) приймає один параметр
+// productName — назва товару.
+//
+// Функція містить масив об'єктів products з такими властивостями:
+// name — ім'я товару
+// price — ціна
+// quantity — кількість
+//
+// Доповни код функції так, щоб вона повертала загальну вартість
+// (ціна * кількість) товару з таким ім'ям з масиву products.
+//
+// Якщо продукту з такою назвою немає,
+// функція повинна повертати рядок:
+// "Product <productName> not found!"
+
+function calculateTotalPrice(productName) {
+  const products = [
+    { name: 'Radar', price: 1300, quantity: 4 },
+    { name: 'Scanner', price: 2700, quantity: 3 },
+    { name: 'Droid', price: 400, quantity: 7 },
+    { name: 'Grip', price: 1200, quantity: 9 },
+  ];
+
+  // твой код здесь
+  for (const product of products) {
+    if (productName === product['name']) {
+      return product['price'] * product['quantity'];
+    }
+  }
+  return `Product ${productName} not found!`;
+}
+
+console.log(calculateTotalPrice('Blaster')); // "Product Blaster not found!"
+console.log(calculateTotalPrice('Radar')); // 5200
+console.log(calculateTotalPrice('Droid')); // 2800
+console.log(calculateTotalPrice('Grip')); // 10800
+console.log(calculateTotalPrice('Scanner')); // 8100
