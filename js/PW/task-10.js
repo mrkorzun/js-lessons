@@ -330,9 +330,17 @@ console.log(calculateTotalPrice('Scanner')); // 8100
 
 const atTheOldToad = {
   // твой код здесь
+  potions: [],
+  getPotions() {
+    return 'List of all available potions';
+  },
+  addPotion(potionName) {
+    return `Adding ${potionName}`;
+  },
 };
 
 console.log(atTheOldToad.potions); // []
 console.log(atTheOldToad.getPotions()); // "List of all available potions"
 console.log(atTheOldToad.addPotion('Invisibility')); // "Adding Invisibility"
 console.log(atTheOldToad.addPotion('Power potion')); // "Adding Power potion"
+console.table(atTheOldToad.potions);
