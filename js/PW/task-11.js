@@ -57,13 +57,12 @@ function getSaleProducts(products) {
 function addOverNum(value, ...args) {
   let totalSum = 0;
   for (const sum of args) {
-    totalSum += sum;
+    if (totalSum < value) {
+      totalSum += sum;
+    }
+    return totalSum;
   }
-  if (totalSum > value) {
-    return 0;
-  }
-  return totalSum;
 }
 
 console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
-console.log(ddOverNum(15, 32, 6, 13, 19, 8));
+console.log(addOverNum(15, 32, 6, 13, 19, 8));
