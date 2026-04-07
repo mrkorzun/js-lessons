@@ -162,25 +162,25 @@ console.log(addOverNum(15, 32, 6, 13, 19, 8));
 //         3. взяти перші три товари
 //         4. повернути масив лише з назв
 
-const products = [
-  { name: 'A', price: 100, inStock: true },
-  { name: 'B', price: 500, inStock: true },
-  { name: 'C', price: 300, inStock: false },
-  { name: 'D', price: 800, inStock: true },
-  { name: 'E', price: 200, inStock: true },
-  { name: 'F', price: 1200, inStock: false },
-  { name: 'G', price: 950, inStock: true },
-];
+// const products = [
+//   { name: 'A', price: 100, inStock: true },
+//   { name: 'B', price: 500, inStock: true },
+//   { name: 'C', price: 300, inStock: false },
+//   { name: 'D', price: 800, inStock: true },
+//   { name: 'E', price: 200, inStock: true },
+//   { name: 'F', price: 1200, inStock: false },
+//   { name: 'G', price: 950, inStock: true },
+// ];
 
-const topProducts = {
-  products,
+// const topProducts = {
+//   products,
 
-  getTopThreeAvailable() {
-    return this.products
-      .filter(product => product.inStock)
-      .toSorted((a, b) => b.price - a.price)
-      .slice(0, 3)
-      .map(product => product.name);
-  },
-};
-console.table(topProducts.getTopThreeAvailable()); // ["G", "D", "B"]
+//   getTopThreeAvailable() {
+//     return this.products
+//       .filter(product => product.inStock)
+//       .toSorted((a, b) => b.price - a.price)
+//       .slice(0, 3)
+//       .map(product => product.name);
+//   },
+// };
+// console.table(topProducts.getTopThreeAvailable()); // ["G", "D", "B"]
