@@ -109,20 +109,20 @@ console.log(addOverNum(15, 32, 6, 13, 19, 8));
 
 // ==== VAriant2 ====
 
-getPromoProducts() {
-    return this.products
-      .filter(products => {
-        const newPrice = products.price - (products.price * products.discount) / 100;
-        return products.inStock && newPrice < 2000 && products.discount > 0;
-      })
-      .map(product => {
-        const newPrice = product.price - (product.price * product.discount) / 100;
-        return {
-          name: product.name,
-          newPrice,
-        };
-      });
-  },
+// getPromoProducts() {
+//     return this.products
+//       .filter(products => {
+//         const newPrice = products.price - (products.price * products.discount) / 100;
+//         return products.inStock && newPrice < 2000 && products.discount > 0;
+//       })
+//       .map(product => {
+//         const newPrice = product.price - (product.price * product.discount) / 100;
+//         return {
+//           name: product.name,
+//           newPrice,
+//         };
+//       });
+//   },
 
 // ==== VAriant3 ====
 
@@ -143,11 +143,39 @@ getPromoProducts() {
 //   },
 // };
 
-console.table(promoManager.getPromoProducts());
-console.table(products);
+// console.table(promoManager.getPromoProducts());
+// console.table(products);
 // [
 //   { name: "Футболка", newPrice: 720 },
 //   { name: "Худі", newPrice: 1530 }
 // ]1
 
 // ===== TASK 3 =====
+// Для окремого блоку на сайті замовник хоче вивести лише три найдорожчі товари,
+// які реально є в наявності. У підсумку потрібні тільки назви.
+// Дані
+const products = [
+  { name: 'A', price: 100, inStock: true },
+  { name: 'B', price: 500, inStock: true },
+  { name: 'C', price: 300, inStock: false },
+  { name: 'D', price: 800, inStock: true },
+  { name: 'E', price: 200, inStock: true },
+  { name: 'F', price: 1200, inStock: false },
+  { name: 'G', price: 950, inStock: true },
+];
+// ТЗ
+// Створи об’єкт topProducts з методом:
+//     • getTopThreeAvailable() — має:
+//         1. залишити тільки товари, які є в наявності
+//         2. відсортувати їх за ціною від більшої до меншої
+//         3. взяти перші три товари
+//         4. повернути масив лише з назв
+// Заготовка
+const topProducts = {
+  products,
+
+  getTopThreeAvailable() {},
+};
+// Перевірка
+console.table(topProducts.getTopThreeAvailable());
+// ["G", "D", "B"]
