@@ -153,7 +153,15 @@ console.log(addOverNum(15, 32, 6, 13, 19, 8));
 // ===== TASK 3 =====
 // Для окремого блоку на сайті замовник хоче вивести лише три найдорожчі товари,
 // які реально є в наявності. У підсумку потрібні тільки назви.
-// Дані
+
+// ТЗ
+// Створи об’єкт topProducts з методом:
+//     • getTopThreeAvailable() — має:
+//         1. залишити тільки товари, які є в наявності
+//         2. відсортувати їх за ціною від більшої до меншої
+//         3. взяти перші три товари
+//         4. повернути масив лише з назв
+
 const products = [
   { name: 'A', price: 100, inStock: true },
   { name: 'B', price: 500, inStock: true },
@@ -163,14 +171,7 @@ const products = [
   { name: 'F', price: 1200, inStock: false },
   { name: 'G', price: 950, inStock: true },
 ];
-// ТЗ
-// Створи об’єкт topProducts з методом:
-//     • getTopThreeAvailable() — має:
-//         1. залишити тільки товари, які є в наявності
-//         2. відсортувати їх за ціною від більшої до меншої
-//         3. взяти перші три товари
-//         4. повернути масив лише з назв
-// Заготовка
+
 const topProducts = {
   products,
 
@@ -182,6 +183,4 @@ const topProducts = {
       .map(product => product.name);
   },
 };
-// Перевірка
-console.table(topProducts.getTopThreeAvailable());
-// ["G", "D", "B"]
+console.table(topProducts.getTopThreeAvailable()); // ["G", "D", "B"]
