@@ -74,13 +74,13 @@ console.log(addOverNum(15, 32, 6, 13, 19, 8));
 // Туди мають потрапити лише товари, у яких є знижка, які є в наявності,
 // і які після знижки коштують не більше 2000 гривень.
 // Дані
-const products = [
-  { name: 'Футболка', price: 800, discount: 10, inStock: true },
-  { name: 'Худі', price: 1800, discount: 15, inStock: true },
-  { name: 'Куртка', price: 3200, discount: 20, inStock: true },
-  { name: 'Кепка', price: 600, discount: 0, inStock: true },
-  { name: 'Сумка', price: 2200, discount: 10, inStock: false },
-];
+// const products = [
+//   { name: 'Футболка', price: 800, discount: 10, inStock: true },
+//   { name: 'Худі', price: 1800, discount: 15, inStock: true },
+//   { name: 'Куртка', price: 3200, discount: 20, inStock: true },
+//   { name: 'Кепка', price: 600, discount: 0, inStock: true },
+//   { name: 'Сумка', price: 2200, discount: 10, inStock: false },
+// ];
 // ТЗ
 // Створи об’єкт promoManager з методом:
 //• getPromoProducts() — має:
@@ -91,62 +91,57 @@ const products = [
 // 5. повернути новий масив об’єктів у форматі:
 //     ▪ { name, newPrice }
 // Заготовка
-const promoManager = {
-  products,
-  /*
-  getPromoProducts() {
-    return this.products
-      .filter(product => product.inStock && product.discount > 0)
-      .map(product => {
-        const newPrice =
-          product.price - (product.price / 100) * product.discount;
-        return {
-          name: product.name,
-          newPrice,
-        };
-      })
-      .filter(product => product.newPrice <= 2000);
-    },
-  */
-  // ==== VAriant2 ====
-  /*
-  getPromoProducts() {
+// const promoManager = {
+//   products,
+//   getPromoProducts() {
+//     return this.products
+//       .filter(product => product.inStock && product.discount > 0)
+//       .map(product => {
+//         const newPrice =
+//           product.price - (product.price / 100) * product.discount;
+//         return {
+//           name: product.name,
+//           newPrice,
+//         };
+//       })
+//       .filter(product => product.newPrice <= 2000);
+//     },
+
+// ==== VAriant2 ====
+
+getPromoProducts() {
     return this.products
       .filter(products => {
-        const newPrice =
-          products.price - (products.price * products.discount) / 100;
-        return (
-          products.inStock === true && newPrice < 2000 && products.discount > 0
-        );
+        const newPrice = products.price - (products.price * products.discount) / 100;
+        return products.inStock && newPrice < 2000 && products.discount > 0;
       })
       .map(product => {
-        const newPrice =
-          products.price - (products.price * products.discount) / 100;
+        const newPrice = product.price - (product.price * product.discount) / 100;
         return {
           name: product.name,
           newPrice,
         };
       });
   },
-*/
-  // ==== VAriant3 ====
 
-  getPromoProducts() {
-    return this.products
-      .filter(
-        element =>
-          element.inStock &&
-          element.discount > 0 &&
-          element.price - (element.price / 100) * element.discount < 2000
-      )
-      .map(element => {
-        return {
-          name: element.name,
-          newPrice: element.price - (element.price / 100) * element.discount,
-        };
-      });
-  },
-};
+// ==== VAriant3 ====
+
+//   getPromoProducts() {
+//     return this.products
+//       .filter(
+//         element =>
+//           element.inStock &&
+//           element.discount > 0 &&
+//           element.price - (element.price / 100) * element.discount < 2000
+//       )
+//       .map(element => {
+//         return {
+//           name: element.name,
+//           newPrice: element.price - (element.price / 100) * element.discount,
+//         };
+//       });
+//   },
+// };
 
 console.table(promoManager.getPromoProducts());
 console.table(products);
