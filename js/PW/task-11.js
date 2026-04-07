@@ -93,7 +93,7 @@ const products = [
 // Заготовка
 const promoManager = {
   products,
-
+  /*
   getPromoProducts() {
     return this.products
       .filter(product => product.inStock && product.discount > 0)
@@ -106,6 +106,45 @@ const promoManager = {
         };
       })
       .filter(product => product.newPrice <= 2000);
+    },
+  */
+  // ==== VAriant2 ====
+  /*
+  getPromoProducts() {
+    return this.products
+      .filter(products => {
+        const newPrice =
+          products.price - (products.price * products.discount) / 100;
+        return (
+          products.inStock === true && newPrice < 2000 && products.discount > 0
+        );
+      })
+      .map(product => {
+        const newPrice =
+          products.price - (products.price * products.discount) / 100;
+        return {
+          name: product.name,
+          newPrice,
+        };
+      });
+  },
+*/
+  // ==== VAriant3 ====
+
+  getPromoProducts() {
+    return this.products
+      .filter(
+        element =>
+          element.inStock &&
+          element.discount > 0 &&
+          element.price - (element.price / 100) * element.discount < 2000
+      )
+      .map(element => {
+        return {
+          name: element.name,
+          newPrice: element.price - (element.price / 100) * element.discount,
+        };
+      });
   },
 };
 
@@ -115,3 +154,5 @@ console.table(products);
 //   { name: "Футболка", newPrice: 720 },
 //   { name: "Худі", newPrice: 1530 }
 // ]1
+
+// ===== TASK 3 =====
