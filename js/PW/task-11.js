@@ -184,3 +184,44 @@ console.log(addOverNum(15, 32, 6, 13, 19, 8));
 //   },
 // };
 // console.table(topProducts.getTopThreeAvailable()); // ["G", "D", "B"]
+
+// ===== TASK 4 ====
+// Продажі
+
+// 1. залишити тільки success === true
+// 2. відсортувати за amount за спаданням
+// 3. отримати масив імен менеджерів
+// 4. порахувати загальну суму amount успішних продажів
+
+// TODO
+// зроби окремо:
+// getSuccessfulManagers()
+// getSuccessfulTotal()
+
+const sales = [
+  { manager: 'Ivan', amount: 500, success: true },
+  { manager: 'Olha', amount: 1200, success: false },
+  { manager: 'Marta', amount: 700, success: true },
+  { manager: 'Taras', amount: 300, success: true },
+];
+
+console.table(sales);
+
+const salesClone = structuredClone(sales);
+
+const getSuccessfulManagers = sales => {
+  return sales
+    .filter(sale => sale.success)
+    .toSorted((a, b) => b.amount - a.amount)
+    .map(sale => sale.manager);
+};
+
+const getSuccessfulTotal = sales => {
+  return sales
+    .filter(sale => sale.success)
+    .reduce((acc, sale) => acc + sale.amount, 0);
+};
+
+console.table(getSuccessfulManagers(salesClone)); // ['Marta', 'Ivan', 'Taras']
+console.table(getSuccessfulTotal(salesClone)); // 1500
+console.table(sales);
