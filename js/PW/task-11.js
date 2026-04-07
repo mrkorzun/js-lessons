@@ -15,7 +15,7 @@
 // Використай:
 // map
 // стрілочні функції
-
+/*
 const products = [
   { name: 'Phone', price: 12000, discount: 10 },
   // { name: "Phone", oldPrice: 12000, newPrice: 10800, isExpensive: true }
@@ -47,9 +47,23 @@ function getSaleProducts(products) {
     };
   });
 }
-
-console.log(getSaleProducts(products));
+*/
+// console.log(getSaleProducts(products));
 // [
 //   { name: "Phone", oldPrice: 12000, newPrice: 10800, isExpensive: true },
 //   { name: "Mouse", oldPrice: 800, newPrice: 760, isExpensive: false }
 // ]
+
+function addOverNum(value, ...args) {
+  let totalSum = 0;
+  for (const sum of args) {
+    totalSum += sum;
+  }
+  if (totalSum > value) {
+    return 0;
+  }
+  return totalSum;
+}
+
+console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+console.log(ddOverNum(15, 32, 6, 13, 19, 8));
