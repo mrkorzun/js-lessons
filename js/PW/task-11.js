@@ -205,8 +205,6 @@ const sales = [
   { manager: 'Taras', amount: 300, success: true },
 ];
 
-console.table(sales);
-
 const salesClone = structuredClone(sales);
 
 const getSuccessfulManagers = sales => {
@@ -224,4 +222,3 @@ const getSuccessfulTotal = sales => {
 
 console.table(getSuccessfulManagers(salesClone)); // ['Marta', 'Ivan', 'Taras']
 console.table(getSuccessfulTotal(salesClone)); // 1500
-console.table(sales);
