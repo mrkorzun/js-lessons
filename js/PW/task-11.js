@@ -174,7 +174,13 @@ const products = [
 const topProducts = {
   products,
 
-  getTopThreeAvailable() {},
+  getTopThreeAvailable() {
+    return this.products
+      .filter(product => product.inStock)
+      .toSorted((a, b) => b.price - a.price)
+      .slice(0, 3)
+      .map(product => product.name);
+  },
 };
 // Перевірка
 console.table(topProducts.getTopThreeAvailable());
