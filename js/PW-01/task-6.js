@@ -172,31 +172,111 @@
 // У змінній booksByAuthor утворився масив книг,
 // написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR.
 
-const books = [
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Tell-Tale Heart',
+//     author: 'Edgar Allan Poe',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = 'Bernard Cornwell';
+
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+
+// console.log(topRatedBooks); // 8
+// console.log(booksByAuthor); // "Bernard Cornwell"
+
+// ==== TASK 6 ====
+
+// Цей масив об'єктів ми будемо передавати в параметр users
+// під час виклику функції із завдання.
+
+const users = [
   {
-    title: 'The Last Kingdom',
-    author: 'Bernard Cornwell',
-    rating: 8.38,
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
   },
   {
-    title: 'Beside Still Waters',
-    author: 'Robert Sheckley',
-    rating: 8.51,
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
   },
   {
-    title: 'The Tell-Tale Heart',
-    author: 'Edgar Allan Poe',
-    rating: 7.75,
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
   },
-  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
-  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+  },
 ];
 
-const MIN_RATING = 8;
-const AUTHOR = 'Bernard Cornwell';
+// Доповни функцію getUserWithEmail(users, email) таким чином,
+// щоб вона повертала об'єкт користувача,
+// пошта якого (властивість email) збігається зі значенням другого параметра email.
 
-const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
-const booksByAuthor = books.filter(book => book.author === AUTHOR);
+const getUserWithEmail = (users, email) =>
+  users.find(user => user.email === email);
 
-console.log(topRatedBooks); // 8
-console.log(booksByAuthor); // "Bernard Cornwell"
+console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // повертає об'єкт користувача з ім'ям Sheree Anthony
