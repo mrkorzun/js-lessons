@@ -147,26 +147,26 @@ const gadgets = [
 // Тобі треба буде його "прив'язати".
 //
 // Дані для перевірки:
-const brandStore = {
-  prefix: 'SUPER-TECH',
-  formatLabel(product) {
-    return `${this.prefix}: ${product.name} лише за ${product.price}!`;
-  },
-};
+// const brandStore = {
+//   prefix: 'SUPER-TECH',
+//   formatLabel(product) {
+//     return `${this.prefix}: ${product.name} лише за ${product.price}!`;
+//   },
+// };
 
-const generateStoreBanners = (products, categoryName, сallback) =>
-  products
-    .filter(
-      product =>
-        product.category === categoryName && product.tags.includes('in-stock')
-    )
-    .map(product => сallback(product));
+// const generateStoreBanners = (products, categoryName, сallback) =>
+//   products
+//     .filter(
+//       product =>
+//         product.category === categoryName && product.tags.includes('in-stock')
+//     )
+//     .map(product => сallback(product));
 
-// Твій виклик має виглядати приблизно так:
-console.log(
-  generateStoreBanners(
-    gadgets,
-    'smartphones',
-    brandStore.formatLabel.bind(brandStore)
-  )
-);
+// // Твій виклик має виглядати приблизно так:
+// console.log(
+//   generateStoreBanners(
+//     gadgets,
+//     'smartphones',
+//     brandStore.formatLabel.bind(brandStore)
+//   )
+// );
