@@ -24,7 +24,7 @@ const createCategoriesItems = category => {
   const item = document.createElement('li');
   item.classList.add('category-item');
   item.textContent = category;
-  return;
+  return item;
 };
 
 const liEl = categories.map(createCategoriesItems);
