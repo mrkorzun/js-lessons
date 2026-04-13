@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-HW-01</title>
     <style>
-      body {
+      h1 {
+        text-align: center;
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-      }
-      h1 {
-        text-align: center;
       }
       span {
         color: blue;
@@ -27,7 +25,28 @@
       and check
       <span>Console</span>
     </h1>
-    <ul class="categories"></ul>
+    <div>
+      <ul class="categories"></ul>
+      <div class="participants-widget">
+        <input
+          type="text"
+          class="participant-input"
+          placeholder="Введіть ім'я" />
+        <button type="button" class="add-participant">Додати</button>
+        <ul class="participants-list"></ul>
+      </div>
+      <div class="reviews">
+        <div class="review-card">Great service</div>
+        <div class="review-card test">Test review 1</div>
+        <div class="review-card">Fast delivery</div>
+        <div class="review-card test">Test review 2</div>
+      </div>
+      <ul ul class="menu">
+        <li class="menu-item active">Home</li>
+        <li class="menu-item">Catalog</li>
+        <li class="menu-item">Contacts</li>
+      </ul>
+    </div>
 
     <!-- SELF PRACTICE WORK -->
     <!-- <script type="module" src="./js/SPW/task-1.js"></script> -->
