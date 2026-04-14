@@ -60,7 +60,6 @@
 // console.log(refs);
 
 // === Varian 1 =====
-
 // const handleCheckboxChecked = event => {
 //   console.log(event);
 //   if (event.target.checked) {
