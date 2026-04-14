@@ -81,3 +81,108 @@
 // refs.checkBox.addEventListener('change', onChange);
 
 // ==== TASK 3 ====
+// Додавання задач у to-do список
+// Контекст: Користувач планує день у невеликому вебзастосунку.
+// Після натискання кнопки введений текст повинен перетворюватися на новий пункт списку.
+
+// Базовий HTML:
+// <section class="task todo-task">
+//   <h2>Мої справи</h2>
+//   <div class="controls">
+//     <input class="task-input" type="text" placeholder="Нова задача" />
+//     <button class="add" type="button">Add task</button>
+//   </div>
+//   <ul class="list"></ul>
+// </section>
+
+// Розширене ТЗ:
+// • Після кліку на кнопку потрібно створити новий елемент <li> і додати його в кінець списку .list.
+// • Текст нового пункту береться з поля .task-input.
+// • Якщо поле порожнє або містить лише пробіли, новий пункт не додається.
+// • Після успішного додавання поле вводу має очищатися.
+// • Кожне нове завдання повинно додаватися окремим рядком, а не замінювати попередні.
+
+// const refs = {
+//   btn: document.querySelector('.add'),
+//   input: document.querySelector('.task-input'),
+//   list: document.querySelector('.list'),
+// };
+// // console.log(refs);
+
+// refs.btn.addEventListener('click', onBtnClick);
+
+// function onBtnClick(event) {
+//   const inputText = refs.input.value.trim();
+//   if (!inputText) {
+//     return;
+//   }
+//   const liText = `<li>${inputText}</li>`;
+//   refs.list.insertAdjacentHTML('beforeend', liText);
+//   refs.input.value = '';
+// }
+
+// ==== TASK 4 ====
+// Перемикач теми сторінки
+// Контекст: Користувач хоче перемикатися між звичайною та темною темою.
+// Замовник просить реалізувати це через один клас на елементі body.
+
+// Базовий HTML:
+//  <section class="task theme-task">
+//   <h2>Theme switcher</h2>
+//   <button class="theme" type="button">
+//     Змінити тему
+//   </button>
+//   <p>Цей текст потрібен, щоб бачити зміну теми сторінки.</p>
+// </section>;
+
+// Розширене ТЗ:
+// • Після першого кліку на кнопку до елемента body має додаватися клас dark.
+// • Після наступного кліку цей клас має видалятися.
+// • Припускається, що стилі теми вже описані в CSS або будуть додані окремо;
+// задача стосується саме логіки перемикання.
+// • Логіка повинна впливати на всю сторінку, а не лише на кнопку або окремий блок.
+
+// const refs = {
+//   themeBtn: document.querySelector('.theme'),
+//   // body: document.querySelector('body'),
+// };
+
+// refs.themeBtn.addEventListener('click', onThemeBtnClick);
+
+// function onThemeBtnClick(event) {
+//   document.body.classList.toggle('dark');
+// }
+
+// ==== TASK 5 ====
+// Живе прев’ю введеного імені
+// Контекст: У формі реєстрації користувач вводить своє ім’я і відразу нижче бачить,
+// як воно буде відображатися в профілі.
+
+// Базовий HTML:
+
+/* <section class="task preview-task">
+  <h2>Прев’ю імені</h2>
+  <label>
+    Введіть ім’я:
+    <input class="input" type="text" placeholder="Ваше ім’я" />
+  </label>
+  <p class="output"></p>
+</section>; */
+
+// Розширене ТЗ:
+// •	При кожній зміні значення в полі вводу текст має одразу відображатися в елементі .output.
+// •	Виводити потрібно саме поточний вміст input, без додаткових фраз на кшталт «Ваше ім’я:».
+// •	Якщо користувач повністю очищає поле, блок .output також повинен ставати порожнім.
+// •	Оновлення має відбуватися в момент введення, а не після втрати фокусу.
+
+const refs = {
+  input: document.querySelector('.input'),
+  output: document.querySelector('.output'),
+};
+
+refs.input.addEventListener('input', onInputText);
+
+function onInputText(event) {
+  refs.output.textContent = refs.input.value.trim();
+  return;
+}
