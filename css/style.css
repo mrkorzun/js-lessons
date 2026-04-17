@@ -55,3 +55,12 @@ body {
   --shadow:
     rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 }
+
+.box {
+  position: absolute;
+  background-color: #aa3bff;
+  /* transform: translate(50px); */
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
