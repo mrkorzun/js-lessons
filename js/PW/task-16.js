@@ -75,23 +75,25 @@
 // • Інші елементи списку не повинні реагувати на клік.
 // • Не вішай окремі слухачі на кожну кнопку.
 
-const notes = document.querySelector('.notes');
+// const notes = document.querySelector('.notes');
 
-notes.addEventListener('click', event => {
-  // console.log('click'); // проверка слухача
-  // как мне "обмежити" клики на странице?
-  // если одна кнопка в разметке
-  // if (event.target.nodeName !== 'BUTTON') {
-  //   return;
-  // }
-  // console.log(event.target.nodeName);
-  // вот как: нужно сделать if{} и если это не наш тег то выходим из функции
-  // если несколько то лучше вторую ифку с classList.contains("class")
-  if (!event.target.classList.contains('delete-btn')) {
-    return;
-  }
-  console;
-  // пошук вверх closest
-  event.target.closest('.note-item').remove();
-  // теперь удаляем найденную лишку от кнопки
-});
+// notes.addEventListener('click', event => {
+//   // console.log('click'); // проверка слухача
+//   // как мне "обмежити" клики на странице?
+//   // если одна кнопка в разметке
+//   // if (event.target.nodeName !== 'BUTTON') {
+//   //   return;
+//   // }
+//   // console.log(event.target.nodeName);
+//   // вот как: нужно сделать if{} и если это не наш тег то выходим из функции
+//   // если несколько то лучше вторую ифку с classList.contains("class")
+//   if (!event.target.classList.contains('delete-btn')) {
+//     return;
+//   }
+//   console;
+//   // пошук вверх closest
+//   event.target.closest('.note-item').remove();
+//   // теперь удаляем найденную лишку от кнопки
+// });
+
+// ==== TASK 3 ====
