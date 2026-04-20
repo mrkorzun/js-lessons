@@ -155,3 +155,115 @@
 // };
 
 // window.addEventListener('mousemove', onMouseMove);
+
+// ==== TASK 6 ==== Клавіатурне піаніно === Mon 20 Apr
+// Напиши скрипт, який «слухає» натискання клавіш на клавіатурі
+// та виводить у консоль (або на екран), яку саме клавішу натиснув користувач,
+// та її код.
+
+// Твої кроки:
+
+// Потрібно вибрати об'єкт, який буде «слухати» клавіатуру.
+// Оскільки ми хочемо ловити натискання в будь-якому місці сторінки,
+// це буде document або window.
+
+// Використовуй подію keydown (натискання клавіші).
+
+// В об'єкті події event нам цікаві дві властивості:
+// key (символ) та code (фізичний код клавіші).
+
+// window.addEventListener('keydown', onKeyDown);
+// const list = document.createElement('ul');
+// list.classList.add('log-list');
+// document.body.append(list);
+// function onKeyDown(event) {
+//   console.log('Key:', event.key, ', Code:', event.code);
+//   const markup = `<li>Натиснуто: ${event.key} | Код: ${event.code}</li>`;
+//   if (event.key !== 'Escape') {
+//     list.insertAdjacentHTML('beforeend', markup);
+//   } else {
+//     list.innerHTML = '';
+//   }
+// }
+
+// ==== Task 7 ==== Кнопковий секундомір
+// let counter = 0;
+// const intervalTime = setInterval(() => {
+//   counter += 1;
+//   console.log(`Time: ${counter}`);
+//   if (counter >= 10) {
+//     clearInterval(intervalTime);
+//   }
+// }, 1000);
+
+// Давай перенесемо цей лічильник з консолі на сторінку та додамо керування.
+
+// Твій план:
+
+// HTML: Тобі знадобляться дві кнопки: «Старт» та «Стоп», а також елемент (наприклад, <h1>), де ми будемо показувати цифри.
+
+// JS (Старт): При натисканні на «Старт» має запускатися той самий setInterval, який оновлює текст у <h1>.
+
+// JS (Стоп): При натисканні на «Стоп» інтервал має очищатися.
+
+const title = document.createElement('h1');
+title.classList.add('title');
+document.body.append(title);
+
+const startBtn = document.createElement('button');
+startBtn.classList.add('js-start-button');
+startBtn.style.width = '150px';
+startBtn.style.height = '50px';
+startBtn.textContent = 'Start';
+document.body.append(startBtn);
+
+const stopBtn = document.createElement('button');
+stopBtn.classList.add('js-stop-button');
+stopBtn.style.width = '150px';
+stopBtn.style.height = '50px';
+stopBtn.textContent = 'Stop';
+document.body.append(stopBtn);
+
+const resetBtn = document.createElement('button');
+resetBtn.classList.add('js-reset-button');
+resetBtn.style.width = '150px';
+resetBtn.style.height = '50px';
+resetBtn.textContent = 'Reset';
+document.body.append(resetBtn);
+
+let counter = 0;
+let intervalId = null;
+
+updateDisplay();
+
+function updateDisplay() {
+  const minutes = String(Math.floor(counter / 60)).padStart(2, '0');
+  const seconds = String(counter % 60).padStart(2, '0');
+  title.textContent = `${minutes}:${seconds}`;
+}
+
+function onStartBtnTimer(event) {
+  if (intervalId !== null) {
+    return;
+  }
+  intervalId = setInterval(() => {
+    counter += 1;
+    updateDisplay();
+  }, 1000);
+}
+
+function onStopBtnTimer(event) {
+  clearInterval(intervalId);
+  intervalId = null;
+}
+
+function onResetBtnTimer(event) {
+  clearInterval(intervalId);
+  intervalId = null;
+  counter = 0;
+  updateDisplay();
+}
+
+startBtn.addEventListener('click', onStartBtnTimer);
+stopBtn.addEventListener('click', onStopBtnTimer);
+resetBtn.addEventListener('click', onResetBtnTimer);
